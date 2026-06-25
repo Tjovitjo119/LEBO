@@ -1,0 +1,51 @@
+
+> p2-internet-cafe@1.0.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 5s (580 modules)
+ GET / 200 in 5333ms
+ GET / 200 in 68ms
+ ○ Compiling /gallery ...
+ ✓ Compiled /gallery in 685ms (636 modules)
+ ✓ Compiled in 1217ms (636 modules)
+ GET / 200 in 419ms
+ GET / 200 in 76ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 905ms (639 modules)
+ GET /gallery 200 in 238ms
+ ✓ Compiled in 1095ms (636 modules)
+ GET /gallery 200 in 197ms
+ GET /gallery 200 in 79ms
+ GET /gallery 200 in 131ms
+ GET /gallery 200 in 94ms
+ GET /gallery 200 in 57ms
+ GET / 200 in 83ms
+ GET / 200 in 96ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 897ms (640 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 558ms (629 modules)
+ GET /_next/static/webpack/80c65c7e138be833.webpack.hot-update.json 404 in 987ms
+ GET / 200 in 135ms
+ ○ Compiling /prices ...
+ ✓ Compiled /prices in 925ms (634 modules)
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 791ms (645 modules)
+ GET / 200 in 407ms
+ GET / 200 in 281ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4.6s (872 modules)
+ GET /_next/static/webpack/5738b6e63f652b4d.webpack.hot-update.json 404 in 1929ms
+ GET / 200 in 187ms
+ ✓ Compiled in 838ms (881 modules)
+ ✓ Compiled in 754ms (883 modules)
+ ✓ Compiled in 777ms (885 modules)
+ ✓ Compiled in 655ms (885 modules)
+ GET / 200 in 274ms
