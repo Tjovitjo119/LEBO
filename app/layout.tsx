@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
-
 export const metadata: Metadata = {
-  title: "P2 Internet Cafe & Salon",
-  description: "Fast internet, document services, gaming, and professional salon bookings in one place."
+  metadataBase: new URL("https://www.stayradiant.com"),
+  title: {
+    default: "Stay Radiant | Beauty, Wellness, Fashion and Lifestyle",
+    template: "%s | Stay Radiant"
+  },
+  description:
+    "Stay Radiant is a South African beauty, wellness, fashion, and lifestyle blog for a diverse Gen Z community.",
+  openGraph: {
+    title: "Stay Radiant",
+    description:
+      "Beauty, self-care, fashion, wellness, and creator-led lifestyle content from Johannesburg.",
+    images: ["/images/stay-radiant-hero.png"]
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />

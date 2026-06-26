@@ -1,56 +1,46 @@
-export type BookingInput = {
-  customerName: string;
-  phoneNumber: string;
-  email?: string;
-  stylist: string;
-  service: string;
-  bookingDate: string;
-  bookingTime: string;
-  specialRequest?: string;
-};
-
 export type ContactInput = {
   name: string;
-  phoneNumber: string;
-  email?: string;
+  email: string;
+  phoneNumber?: string;
+  subject: string;
   message: string;
+};
+
+export type NewsletterInput = {
+  email: string;
+  source?: string;
 };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function validateBooking(input: Partial<BookingInput>) {
-  const required: Array<keyof BookingInput> = [
-    "customerName",
-    "phoneNumber",
-    "stylist",
-    "service",
-    "bookingDate",
-    "bookingTime"
-  ];
-  const missing = required.filter((field) => !String(input[field] ?? "").trim());
-
-  if (missing.length > 0) {
-    return { ok: false, message: `Missing required fields: ${missing.join(", ")}` };
-  }
-
-  if (input.email && !emailPattern.test(input.email)) {
-    return { ok: false, message: "Please enter a valid email address." };
-  }
-
-  return { ok: true, message: "Valid booking." };
+function requiredFields<T extends Record<string, unknown>>(input: Partial<T>, fields: Array<keyof T>) {
+  return fields.filter((field) => !String(input[field] ?? "").trim());
 }
 
 export function validateContact(input: Partial<ContactInput>) {
-  const required: Array<keyof ContactInput> = ["name", "phoneNumber", "message"];
-  const missing = required.filter((field) => !String(input[field] ?? "").trim());
+  const missing = requiredFields<ContactInput>(input, ["name", "email", "subject", "message"]);
 
   if (missing.length > 0) {
     return { ok: false, message: `Missing required fields: ${missing.join(", ")}` };
   }
 
-  if (input.email && !emailPattern.test(input.email)) {
+  if (!emailPattern.test(String(input.email))) {
     return { ok: false, message: "Please enter a valid email address." };
   }
 
   return { ok: true, message: "Valid message." };
+}
+
+export function validateNewsletter(input: Partial<NewsletterInput>) {
+  const missing = requiredFields<NewsletterInput>(input, ["email"]);
+
+  if (missing.length > 0) {
+    return { ok: false, message: "Please enter your email address." };
+  }
+
+  if (!emailPattern.test(String(input.email))) {
+    return { ok: false, message: "Please enter a valid email address." };
+  }
+
+  return { ok: true, message: "Valid newsletter signup." };
 }

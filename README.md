@@ -1,79 +1,55 @@
-# P2 Internet Cafe & Hair Studio
+# Stay Radiant
 
-A Next.js website for P2 Internet Cafe & Hair Studio. The site includes internet cafe services, hair studio services, gallery photos, prices, contact details, and WhatsApp contact support.
+A full-stack Next.js website for Stay Radiant (Pty) Ltd. The frontend pages and backend API routes run together in one deployable project, so local development and production hosting stay simple.
 
-## Features
+## Included
 
-- Home page with P2 Hair Studio logo and nail background image
-- Services page for internet cafe, hair studio, car wash, and shisanyama services
-- Price list grouped the same way as the services page
-- Gallery page grouped into Braids, Nails, and Haircuts
-- Contact page with phone, email, location, and enquiry form
-- Floating WhatsApp contact button
-- Prisma and PostgreSQL support for saving contact messages
+- Home, About, Blog, Blog Post, Services, Journal, Shop, Courses, and Contact pages
+- Generated editorial image assets in `public/images`
+- Backend API routes for contact messages, newsletter signups, services, gallery assets, and blog posts
+- Prisma schema for optional PostgreSQL persistence
+- Demo-mode API responses when `DATABASE_URL` is not configured
 
 ## Tech Stack
 
-- Next.js
-- TypeScript
+- Next.js App Router
+- React + TypeScript
 - Tailwind CSS
 - Prisma
-- PostgreSQL
+- PostgreSQL optional for production storage
 
-## Project Pages
-
-- `/` - Home
-- `/services` - Services
-- `/prices` - Price list
-- `/gallery` - Hair studio gallery
-- `/contact` - Contact page
-
-## Getting Started
-
-Install dependencies:
+## Run Locally
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-Open the site:
+Open:
 
 ```text
 http://127.0.0.1:3000
 ```
 
-## Environment Variables
+## Environment
 
-Create `.env.local` from `.env.example` and set:
+Create `.env.local` from `.env.example` if you want database-backed forms:
 
 ```env
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:5432/p2_internet_cafe?schema=public"
-NEXT_PUBLIC_WHATSAPP_NUMBER="27826410034"
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:5432/stay_radiant?schema=public"
+NEXT_PUBLIC_WHATSAPP_NUMBER="27826494134"
 ```
 
-The site can still load without `DATABASE_URL`, but the contact form will not save messages to the database.
+Without `DATABASE_URL`, contact and newsletter forms still return successful demo responses so the frontend and backend can be tested immediately.
 
-## Database Setup
-
-Generate Prisma client:
+## Database
 
 ```bash
 npm run prisma:generate
-```
-
-Run migrations in development:
-
-```bash
 npm run prisma:migrate -- --name init
 ```
 
-For production deployment, run:
+For production:
 
 ```bash
 npx prisma migrate deploy
@@ -81,33 +57,10 @@ npx prisma migrate deploy
 
 ## Build
 
-Check TypeScript:
-
-```bash
-npx tsc --noEmit
-```
-
-Build for production:
-
 ```bash
 npm run build
 ```
 
 ## Deploy
 
-Recommended hosting: Vercel.
-
-1. Push this project to GitHub.
-2. Import the repository in Vercel.
-3. Add `DATABASE_URL` and `NEXT_PUBLIC_WHATSAPP_NUMBER` in Vercel environment variables.
-4. Deploy.
-
-Use a hosted PostgreSQL database such as Neon or Supabase for `DATABASE_URL`.
-
-## Contact Details Used
-
-```text
-Phone: 082 641 0034 / 079 089 3301
-Email: psselolo@gmail.com
-Location: 617 Ga-Kuranta, Modjadjiskloof, 0835, opposite ZCC
-```
+Deploy the same project to Vercel. Add `DATABASE_URL` and `NEXT_PUBLIC_WHATSAPP_NUMBER` as environment variables if you want persisted form submissions.

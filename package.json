@@ -1,5 +1,5 @@
 {
-  "name": "p2-internet-cafe-hair-studio",
+  "name": "stay-radiant-fullstack",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
   },
-  "description": "A full-stack Next.js website for P2 Internet Cafe & Hair Studio using TypeScript, Tailwind CSS, Prisma, and PostgreSQL. The frontend pages and backend API routes live in one deployable Next.js project.",
+  "description": "A full-stack Next.js website for Stay Radiant using TypeScript, Tailwind CSS, Prisma, and optional PostgreSQL. Frontend pages and backend API routes live in one deployable project.",
   "main": "next.config.js",
   "directories": {
     "lib": "lib"

@@ -1,35 +1,56 @@
 import { ContactForm } from "@/components/ContactForm";
-import { contactDetails } from "@/lib/site-data";
+import { NewsletterForm } from "@/components/NewsletterForm";
+import { brand, contactDetails } from "@/lib/site-data";
+
+export const metadata = {
+  title: "Contact"
+};
 
 export default function ContactPage() {
   return (
-    <section className="section-p2">
-      <div className="container-p2">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-sm font-black uppercase text-orangeDark">Contact Us</p>
-          <h1 className="mt-3 text-5xl font-black text-charcoal">Questions, directions, and business enquiries.</h1>
+    <>
+      <section className="bg-radiantInk py-20 text-white">
+        <div className="container-sr">
+          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
+          <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Let&apos;s connect.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
+            Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
+          </p>
         </div>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="grid gap-4">
+      </section>
+
+      <section className="section-sr bg-radiantCream">
+        <div className="container-sr grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid content-start gap-4">
             {contactDetails.map(({ label, value, icon: Icon }) => (
-              <div key={label} className="rounded-lg border border-black/10 bg-white p-6 shadow-sm">
-                <div className="mb-3 grid h-11 w-11 place-items-center rounded-md bg-orangeDark/10 text-orangeDark">
+              <div key={label} className="rounded-md border border-radiantInk/10 bg-white p-6 shadow-sm">
+                <div className="mb-3 grid h-11 w-11 place-items-center rounded-md bg-radiantPink/10 text-radiantPink">
                   <Icon size={21} />
                 </div>
-                <p className="text-sm font-black uppercase text-charcoal/60">{label}</p>
-                <p className="mt-1 font-bold text-charcoal">{value}</p>
+                <p className="text-sm font-black uppercase tracking-[0.14em] text-radiantMuted">{label}</p>
+                <p className="mt-1 font-bold text-radiantInk">{value}</p>
               </div>
             ))}
-            <div className="grid min-h-72 place-items-center rounded-lg border border-dashed border-orangeDark/40 bg-white p-6 text-center">
-              <div>
-                <p className="text-xl font-black text-charcoal">Google Maps Placeholder</p>
-                <p className="mt-2 text-sm text-charcoal/70">Embed the shop location map here before launch.</p>
-              </div>
+            <div className="rounded-md bg-radiantInk p-7 text-white">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Business details</p>
+              <p className="mt-4 text-lg font-black">{brand.legalName}</p>
+              <p className="mt-2 text-sm text-white/72">Registration: {brand.registration}</p>
+              <p className="mt-2 text-sm text-white/72">Domain target: {brand.domain}</p>
             </div>
           </div>
           <ContactForm />
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="section-sr bg-white">
+        <div className="container-sr grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Newsletter</p>
+            <h2 className="mt-4 font-display text-5xl leading-tight text-radiantInk">Beauty notes and creator resources, straight to your inbox.</h2>
+          </div>
+          <NewsletterForm source="contact" />
+        </div>
+      </section>
+    </>
   );
 }

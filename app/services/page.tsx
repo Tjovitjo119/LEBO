@@ -1,50 +1,63 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { ServiceCard } from "@/components/ServiceCard";
-import { cafeServices, otherServices, salonServices } from "@/lib/site-data";
+import { editorialInfluences, services } from "@/lib/site-data";
+
+export const metadata = {
+  title: "Services"
+};
 
 export default function ServicesPage() {
   return (
-    <section className="section-p2">
-      <div className="container-p2">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-sm font-black uppercase text-orangeDark">Internet Cafe Services</p>
-          <h1 className="mt-3 text-5xl font-black text-charcoal">Online access, documents, applications, gaming, and more.</h1>
-          <p className="mt-5 text-lg leading-8 text-charcoal/70">
-            P2 helps with everyday digital tasks, printing needs, and computer access in a clean professional space.
+    <>
+      <section className="bg-radiantInk py-20 text-white">
+        <div className="container-sr">
+          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Services</p>
+          <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Bold solutions tailored for impact.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
+            Stay Radiant supports brands and creators through editorial content, collaboration strategy, SEO-led blog
+            growth, and future-ready community products.
           </p>
         </div>
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {cafeServices.map((service) => (
-            <ServiceCard key={service.name} {...service} />
-          ))}
-        </div>
+      </section>
 
-        <div className="mt-14">
-          <h2 className="mb-6 text-3xl font-black text-charcoal">Hair Studio Services</h2>
+      <section className="section-sr bg-radiantCream">
+        <div className="container-sr">
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {salonServices.map((service) => (
+            {services.map((service) => (
               <ServiceCard key={service.name} {...service} />
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-14">
-          <h2 className="mb-6 text-3xl font-black text-charcoal">Other Services</h2>
-          <div className="grid gap-5 md:grid-cols-2">
-            {otherServices.map((service) => (
-              <ServiceCard key={service.name} {...service} />
+      <section className="bg-radiantPink py-16 text-white">
+        <div className="container-sr flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Partnerships</p>
+            <h2 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Partner with bold innovators to elevate your brand.</h2>
+          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantGold"
+          >
+            Get started <ArrowUpRight size={18} />
+          </Link>
+        </div>
+      </section>
+
+      <section className="bg-white py-12">
+        <div className="container-sr">
+          <p className="mb-5 text-center text-xs font-black uppercase tracking-[0.2em] text-radiantPink">Editorial influences</p>
+          <div className="grid gap-3 text-center font-display text-2xl sm:grid-cols-5">
+            {editorialInfluences.map((name) => (
+              <span key={name} className="rounded-md bg-radiantCream px-4 py-5 text-radiantInk">
+                {name}
+              </span>
             ))}
           </div>
         </div>
-
-        <div className="mt-14 rounded-lg bg-charcoal p-8 text-white">
-          <p className="text-sm font-black uppercase text-softGold">Business hours</p>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <p className="rounded-md bg-white/10 p-5 font-bold">Monday-Friday: 08:00-19:00</p>
-            <p className="rounded-md bg-white/10 p-5 font-bold">Saturday: 08:00-18:00</p>
-            <p className="rounded-md bg-white/10 p-5 font-bold">Sunday: 09:00-15:00</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
