@@ -1,12 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { products } from "@/lib/site-data";
 
 const launchImages = [
   { title: "Stay Radiant editorial hero", imageUrl: "/images/stay-radiant-hero.png", category: "Editorial" },
   { title: "Founder studio portrait", imageUrl: "/images/stay-radiant-founder.png", category: "Founder" },
-  { title: "Beauty flatlay", imageUrl: "/images/stay-radiant-flatlay.png", category: "Blog" },
-  ...products.map((product) => ({ title: product.name, imageUrl: product.image, category: "Shop" }))
+  { title: "Beauty flatlay", imageUrl: "/images/stay-radiant-flatlay.png", category: "Blog" }
 ];
 
 export const dynamic = "force-dynamic";

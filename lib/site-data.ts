@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  BookOpen,
   BriefcaseBusiness,
   Camera,
   GraduationCap,
@@ -29,7 +28,9 @@ export const brand = {
   domain: "www.stayradiant.com",
   tagline: "Empowering women through self-expression",
   description:
-    "A South African wellness, beauty, fashion, and lifestyle blog curating authentic content for a diverse Gen Z community."
+    "A South African wellness, beauty, fashion, and lifestyle blog curating authentic content for a diverse Gen Z community.",
+  // Placeholder handle until the client confirms the real Instagram URL.
+  instagramUrl: "https://www.instagram.com/stayradiant"
 };
 
 export const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "27826494134";
@@ -43,8 +44,6 @@ export const navLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/services", label: "Services" },
   { href: "/journal", label: "Journal" },
-  { href: "/shop", label: "Shop" },
-  { href: "/courses", label: "Courses" },
   { href: "/contact", label: "Contact" }
 ];
 
@@ -126,6 +125,8 @@ export type BlogPost = {
   date: string;
   readTime: string;
   image: string;
+  // Optional 5-7s clip or GIF; drop a file in /public/videos and reference it here to replace the still image with motion.
+  video?: string;
   featured?: boolean;
   tags: string[];
   content: string[];
@@ -255,49 +256,27 @@ export const journalEntries = [
   }
 ];
 
-export const courses = [
-  {
-    title: "Blogging Basics",
-    price: "Free trial",
-    icon: BookOpen,
-    description: "A starter path for creators who want to plan, publish, and structure their first blog posts."
-  },
-  {
-    title: "Monetising Your Blog",
-    price: "R2,000",
-    icon: Search,
-    description: "Affiliate links, ad-readiness, SEO foundations, and traffic habits for long-term income."
-  },
-  {
-    title: "Building Your Brand Online",
-    price: "R4,000",
-    icon: Sparkles,
-    description: "A deeper course on voice, visuals, content pillars, community, and creator positioning."
-  }
-];
-
-export const products = [
-  {
-    name: "Radiant Essentials Tee",
-    price: "R350",
-    image: "/images/stay-radiant-merch.png",
-    description: "A soft launch concept for the future Stay Radiant merch line."
-  },
-  {
-    name: "Creator Tote",
-    price: "R350",
-    image: "/images/stay-radiant-merch.png",
-    description: "Designed for laptops, journals, and the everyday tools of creative work."
-  },
-  {
-    name: "Glow Cap",
-    price: "R350",
-    image: "/images/stay-radiant-merch.png",
-    description: "A warm-weather staple for off-duty self-care days and content walks."
-  }
-];
-
 export const editorialInfluences = ["Vogue", "Elle", "Glamour", "People", "Cosmopolitan"];
+
+// Placeholder grid until the client supplies real Instagram photos.
+export const footerGallery = [
+  "/images/stay-radiant-flatlay.png",
+  "/images/stay-radiant-founder.png",
+  "/images/stay-radiant-hero.png",
+  "/images/stay-radiant-merch.png",
+  "/images/stay-radiant-flatlay.png",
+  "/images/stay-radiant-founder.png",
+  "/images/stay-radiant-hero.png",
+  "/images/stay-radiant-merch.png"
+];
+
+// Placeholder wordmarks until the client supplies real partner logo files.
+export const collaborations = [
+  { name: "Digital Girl Africa", first: true },
+  { name: "FOUURA" },
+  { name: "Edladleni Art Gallery" },
+  { name: "Sisley Paris" }
+];
 
 export const contactDetails: Array<{ label: string; value: string; icon: LucideIcon }> = [
   { label: "Location", value: brand.location, icon: MapPin },

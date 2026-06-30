@@ -12,8 +12,19 @@ export function BlogCard({ post, large = false }: BlogCardProps) {
   return (
     <article className="overflow-hidden rounded-md border border-radiantInk/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-glow">
       <Link href={`/blog/${post.categoryPath}/${post.slug}`} className="block">
-        <span className={`relative block ${large ? "aspect-[16/8]" : "aspect-[4/3]"}`}>
-          <Image src={post.image} alt="" fill className="object-cover" />
+        <span className={`relative block overflow-hidden ${large ? "aspect-[16/8]" : "aspect-[4/3]"}`}>
+          {post.video ? (
+            <video
+              src={post.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <Image src={post.image} alt="" fill className="kenburns object-cover" />
+          )}
         </span>
       </Link>
       <div className="p-6">

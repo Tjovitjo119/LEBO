@@ -1,27 +1,41 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BrandMark } from "@/components/BrandMark";
-import { brand, contactDetails, navLinks } from "@/lib/site-data";
+import { Instagram, Music2, Pin, Youtube } from "lucide-react";
+import { brand, contactDetails, footerGallery, navLinks } from "@/lib/site-data";
+
+const socialIcons = [
+  { label: "Instagram", icon: Instagram, href: brand.instagramUrl },
+  { label: "Pinterest", icon: Pin, href: "/contact" },
+  { label: "YouTube", icon: Youtube, href: "/contact" },
+  { label: "TikTok", icon: Music2, href: "/contact" }
+];
 
 export function Footer() {
   return (
     <footer className="bg-radiantInk text-white">
-      <div className="container-sr grid gap-10 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
+      <div className="container-sr grid gap-10 py-12 md:grid-cols-[1.1fr_0.8fr_0.8fr]">
         <div>
-          <div className="mb-4">
-            <BrandMark inverted />
+          <h2 className="mb-4 text-sm font-black uppercase text-radiantGold">Instagram</h2>
+          <div className="grid grid-cols-4 gap-2">
+            {footerGallery.map((src, index) => (
+              <a
+                key={`${src}-${index}`}
+                href={brand.instagramUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="relative block aspect-square overflow-hidden rounded-sm"
+                aria-label="View Stay Radiant on Instagram"
+              >
+                <Image src={src} alt="" fill className="object-cover transition hover:scale-105" />
+              </a>
+            ))}
           </div>
-          <p className="max-w-sm text-sm leading-6 text-white/70">
-            {brand.description}
-          </p>
-          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-radiantGold">
-            {brand.location}
-          </p>
         </div>
 
         <div>
-          <h2 className="mb-4 text-sm font-black uppercase text-radiantGold">Pages</h2>
+          <h2 className="mb-4 text-sm font-black uppercase text-radiantGold">Navigate</h2>
           <div className="grid gap-2 text-sm text-white/75">
-            {navLinks.slice(1).map((item) => (
+            {navLinks.map((item) => (
               <Link key={item.href} href={item.href} className="transition hover:text-white">
                 {item.label}
               </Link>
@@ -36,10 +50,17 @@ export function Footer() {
               <p key={detail.label}>{detail.value}</p>
             ))}
           </div>
-          <div className="mt-6 flex gap-3 text-sm font-bold text-white">
-            {["Instagram", "Pinterest", "YouTube", "TikTok"].map((item) => (
-              <a key={item} href="/contact" className="transition hover:text-radiantGold">
-                {item}
+          <div className="mt-6 flex gap-3">
+            {socialIcons.map(({ label, icon: Icon, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer noopener" : undefined}
+                className="grid h-10 w-10 place-items-center rounded-md border border-white/20 text-white transition hover:border-radiantGold hover:text-radiantGold"
+                aria-label={label}
+              >
+                <Icon size={18} />
               </a>
             ))}
           </div>

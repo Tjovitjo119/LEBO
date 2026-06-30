@@ -92,7 +92,7 @@ export default function AboutPage() {
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Team structure</p>
             <h2 className="mt-4 font-display text-5xl leading-tight text-radiantInk">Built to grow from founder-led publishing into a creator platform.</h2>
           </div>
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
               "CEO & Founder: Lebohang Ramakau",
               "Production: Blog Publisher and Software Developers",

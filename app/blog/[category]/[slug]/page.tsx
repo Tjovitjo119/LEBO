@@ -125,7 +125,7 @@ export default function BlogPostPage({ params }: PostPageProps) {
       <section className="section-sr bg-white">
         <div className="container-sr">
           <h2 className="mb-8 font-display text-5xl text-radiantInk">You might also like</h2>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {related.map((item) => (
               <BlogCard key={item.slug} post={item} />
             ))}
