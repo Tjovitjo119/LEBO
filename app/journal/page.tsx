@@ -10,7 +10,7 @@ export const metadata = {
 export default function JournalPage() {
   return (
     <>
-      <section className="bg-radiantInk py-20 text-white">
+      <section className="bg-radiantPink py-20 text-white">
         <div className="container-sr grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Journal</p>

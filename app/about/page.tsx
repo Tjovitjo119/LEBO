@@ -10,9 +10,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-radiantInk py-24 text-white">
+      <section className="relative overflow-hidden bg-radiantPink py-24 text-white">
         <Image src="/images/stay-radiant-founder.png" alt="" fill sizes="100vw" className="object-cover object-top opacity-35" />
-        <div className="absolute inset-0 bg-radiantInk/55" />
+        <div className="absolute inset-0 bg-radiantPink/55" />
         <div className="container-sr relative">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">About us</p>
           <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Meet the woman behind the brand.</h1>

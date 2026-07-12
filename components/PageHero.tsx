@@ -10,9 +10,9 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description, image, children }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-radiantInk py-24 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-radiantPink py-24 text-white sm:py-28">
       <Image src={image} alt="" fill priority sizes="100vw" className="object-cover object-top opacity-55" />
-      <div className="absolute inset-0 bg-gradient-to-t from-radiantInk via-radiantInk/70 to-radiantInk/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-radiantPink via-radiantPink/70 to-radiantPink/35" />
       <div className="container-sr relative">
         <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">{eyebrow}</p>
         <h1 className="mt-4 max-w-4xl font-display text-5xl leading-tight sm:text-6xl md:text-7xl">{title}</h1>

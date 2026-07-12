@@ -52,7 +52,7 @@ export default function BlogPostPage({ params }: PostPageProps) {
 
   return (
     <>
-      <section className="bg-radiantInk text-white">
+      <section className="bg-radiantPink text-white">
         <div className="container-sr grid gap-10 py-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">{post.category}</p>

@@ -35,7 +35,7 @@ export function GalleryGrid() {
       </div>
 
       {selected ? (
-        <div className="fixed inset-0 z-50 grid place-items-center bg-radiantInk/90 p-4" role="dialog" aria-modal="true">
+        <div className="fixed inset-0 z-50 grid place-items-center bg-radiantPink/90 p-4" role="dialog" aria-modal="true">
           <button
             onClick={() => setSelected(null)}
             className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-md bg-white text-radiantInk"
@@ -43,7 +43,7 @@ export function GalleryGrid() {
           >
             <X size={22} />
           </button>
-          <div className="relative h-[82vh] w-full max-w-4xl overflow-hidden rounded-md bg-black">
+          <div className="relative h-[82vh] w-full max-w-4xl overflow-hidden rounded-md bg-radiantPink">
             <Image src={selected.imageUrl} alt={selected.title} fill sizes="90vw" className="object-contain" />
           </div>
         </div>

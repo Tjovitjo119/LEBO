@@ -38,7 +38,7 @@ export default async function AdminPage() {
 
   return (
     <>
-      <section className="bg-radiantInk py-14 text-white">
+      <section className="bg-radiantPink py-14 text-white">
         <div className="container-sr flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Owner dashboard</p>
