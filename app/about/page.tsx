@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-radiantInk py-24 text-white">
-        <Image src="/images/stay-radiant-founder.png" alt="" fill className="object-cover opacity-35" />
+        <Image src="/images/stay-radiant-founder.png" alt="" fill sizes="100vw" className="object-cover object-top opacity-35" />
         <div className="absolute inset-0 bg-radiantInk/55" />
         <div className="container-sr relative">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">About us</p>
@@ -21,8 +21,14 @@ export default function AboutPage() {
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
-            <Image src="/images/stay-radiant-founder.png" alt="" fill className="object-cover" />
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
+            <Image
+              src="/images/stay-radiant-founder.png"
+              alt=""
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover object-top transition duration-700 ease-out group-hover:scale-105"
+            />
           </div>
           <div>
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Founder story</p>
@@ -65,17 +71,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-sr bg-radiantInk text-white">
+      <section className="section-sr bg-radiantCream text-radiantInk">
         <div className="container-sr">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Values</p>
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Values</p>
               <h2 className="mt-4 font-display text-5xl leading-tight">The tone is warm, bold, inclusive, and editorial.</h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {brandValues.map(({ title, icon: Icon }) => (
-                <div key={title} className="flex items-center gap-4 rounded-md border border-white/10 bg-white/8 p-5">
-                  <span className="grid h-11 w-11 place-items-center rounded-md bg-radiantGold text-radiantInk">
+                <div key={title} className="flex items-center gap-4 rounded-md border border-radiantInk/10 bg-white p-5">
+                  <span className="grid h-11 w-11 place-items-center rounded-md bg-radiantPink/10 text-radiantPink">
                     <Icon size={21} />
                   </span>
                   <span className="text-lg font-black">{title}</span>
@@ -105,7 +111,7 @@ export default function AboutPage() {
           </div>
           <Link
             href="/contact"
-            className="mt-10 inline-flex items-center gap-2 rounded-md bg-radiantPink px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-radiantInk"
+            className="mt-10 inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk shadow-sm transition hover:bg-radiantCream"
           >
             Contact us <ArrowUpRight size={18} />
           </Link>

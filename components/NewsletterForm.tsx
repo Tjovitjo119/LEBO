@@ -39,6 +39,14 @@ export function NewsletterForm({ source = "website", compact = false }: Newslett
   return (
     <form onSubmit={onSubmit} className={compact ? "grid gap-3" : "grid gap-4 sm:grid-cols-[1fr_auto]"}>
       <input type="hidden" name="source" value={source} />
+      <input
+        type="text"
+        name="companyWebsite"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+      />
       <label className="sr-only" htmlFor={`newsletter-email-${source}`}>
         Email address
       </label>
@@ -52,7 +60,7 @@ export function NewsletterForm({ source = "website", compact = false }: Newslett
       />
       <button
         disabled={status === "loading"}
-        className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-radiantPink px-6 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-radiantInk disabled:cursor-wait disabled:opacity-70"
+        className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-radiantPink px-6 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90 disabled:cursor-wait disabled:opacity-70"
       >
         <Send size={17} />
         {status === "loading" ? "Sending" : "Send"}

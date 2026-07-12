@@ -21,9 +21,15 @@ export function GalleryGrid() {
           <button
             key={image.title}
             onClick={() => setSelected(image)}
-            className="group relative aspect-[4/5] overflow-hidden rounded-md bg-radiantInk text-left shadow-sm"
+            className="group relative aspect-[4/5] overflow-hidden rounded-md bg-radiantCream text-left shadow-sm"
           >
-            <Image src={image.imageUrl} alt={image.title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+            <Image
+              src={image.imageUrl}
+              alt={image.title}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover object-top transition duration-500 group-hover:scale-105"
+            />
           </button>
         ))}
       </div>
@@ -38,7 +44,7 @@ export function GalleryGrid() {
             <X size={22} />
           </button>
           <div className="relative h-[82vh] w-full max-w-4xl overflow-hidden rounded-md bg-black">
-            <Image src={selected.imageUrl} alt={selected.title} fill className="object-contain" />
+            <Image src={selected.imageUrl} alt={selected.title} fill sizes="90vw" className="object-contain" />
           </div>
         </div>
       ) : null}

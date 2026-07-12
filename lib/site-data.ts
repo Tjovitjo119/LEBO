@@ -272,7 +272,7 @@ export const footerGallery = [
 
 // Placeholder wordmarks until the client supplies real partner logo files.
 export const collaborations = [
-  { name: "Digital Girl Africa", first: true },
+  { name: "Digital Girl Africa" },
   { name: "FOUURA" },
   { name: "Edladleni Art Gallery" },
   { name: "Sisley Paris" }

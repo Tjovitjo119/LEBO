@@ -23,7 +23,13 @@ export function BlogCard({ post, large = false }: BlogCardProps) {
               className="h-full w-full object-cover"
             />
           ) : (
-            <Image src={post.image} alt="" fill className="kenburns object-cover" />
+            <Image
+              src={post.image}
+              alt=""
+              fill
+              sizes={large ? "(max-width: 1024px) 100vw, 800px" : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 380px"}
+              className="kenburns object-cover object-top"
+            />
           )}
         </span>
       </Link>

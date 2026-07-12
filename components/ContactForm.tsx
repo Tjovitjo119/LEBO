@@ -35,6 +35,14 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4 rounded-md border border-radiantInk/10 bg-white p-6 shadow-sm">
+      <input
+        type="text"
+        name="companyWebsite"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+      />
       <Field name="name" label="Name" required />
       <Field name="email" label="Email address" type="email" required />
       <Field name="phoneNumber" label="Phone number" />
@@ -54,7 +62,7 @@ export function ContactForm() {
       </label>
       <button
         disabled={status === "loading"}
-        className="inline-flex items-center justify-center gap-2 rounded-md bg-radiantPink px-5 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-radiantInk disabled:cursor-wait disabled:opacity-70"
+        className="inline-flex items-center justify-center gap-2 rounded-md bg-radiantPink px-5 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90 disabled:cursor-wait disabled:opacity-70"
       >
         <Send size={18} />
         {status === "loading" ? "Sending" : "Send message"}

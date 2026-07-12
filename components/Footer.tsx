@@ -23,10 +23,16 @@ export function Footer() {
                 href={brand.instagramUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="relative block aspect-square overflow-hidden rounded-sm"
+                className="group relative block aspect-square overflow-hidden rounded-sm"
                 aria-label="View Stay Radiant on Instagram"
               >
-                <Image src={src} alt="" fill className="object-cover transition hover:scale-105" />
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 25vw, 140px"
+                  className="object-cover object-top transition duration-500 group-hover:scale-110"
+                />
               </a>
             ))}
           </div>
@@ -67,7 +73,10 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/60">
-        Copyright 2026 {brand.legalName}. Full-stack Next.js deployment.
+        Copyright 2026 {brand.legalName}. Full-stack Next.js deployment.{" "}
+        <Link href="/admin" className="text-white/40 hover:text-white/70">
+          Owner login
+        </Link>
       </div>
     </footer>
   );

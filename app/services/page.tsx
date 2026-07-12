@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
 import { ServiceCard } from "@/components/ServiceCard";
 import { editorialInfluences, services } from "@/lib/site-data";
 
@@ -10,16 +11,12 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-radiantInk py-20 text-white">
-        <div className="container-sr">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Services</p>
-          <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Bold solutions tailored for impact.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
-            Stay Radiant supports brands and creators through editorial content, collaboration strategy, SEO-led blog
-            growth, and future-ready community products.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Services"
+        title="Bold solutions tailored for impact."
+        description="Stay Radiant supports brands and creators through editorial content, collaboration strategy, SEO-led blog growth, and future-ready community products."
+        image="/images/stay-radiant-flatlay.png"
+      />
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr">
@@ -31,15 +28,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-radiantPink py-16 text-white">
+      <section className="bg-radiantCream py-16 text-radiantInk">
         <div className="container-sr flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Partnerships</p>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Partnerships</p>
             <h2 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Partner with bold innovators to elevate your brand.</h2>
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantGold"
+            className="inline-flex items-center gap-2 rounded-md bg-radiantPink px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90"
           >
             Get started <ArrowUpRight size={18} />
           </Link>

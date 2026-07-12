@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
+import { getClientKey, isRateLimited } from "@/lib/rate-limit";
 import { prisma } from "@/lib/prisma";
 import { validateContact } from "@/lib/validations";
 
 export async function POST(request: Request) {
   try {
+    if (isRateLimited(`contact:${getClientKey(request)}`)) {
+      return NextResponse.json({ message: "Too many requests. Please try again later." }, { status: 429 });
+    }
+
     const body = await request.json();
     const validation = validateContact(body);
 

@@ -7,8 +7,8 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.stayradiant.com"),
   title: {
-    default: "Stay Radiant | Beauty, Wellness, Fashion and Lifestyle",
-    template: "%s | Stay Radiant"
+    default: "Home - Stay Radiant",
+    template: "%s - Stay Radiant"
   },
   description:
     "Stay Radiant is a South African beauty, wellness, fashion, and lifestyle blog for a diverse Gen Z community.",

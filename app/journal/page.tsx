@@ -20,7 +20,7 @@ export default function JournalPage() {
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-md shadow-sm">
-            <Image src="/images/stay-radiant-flatlay.png" alt="" fill className="object-cover" />
+            <Image src="/images/stay-radiant-flatlay.png" alt="" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
           </div>
         </div>
       </section>
@@ -36,12 +36,12 @@ export default function JournalPage() {
         </div>
       </section>
 
-      <section className="bg-radiantPink py-16 text-white">
+      <section className="bg-radiantCream py-16 text-radiantInk">
         <div className="container-sr flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <h2 className="max-w-3xl font-display text-5xl leading-tight">Ready to collaborate on the next chapter?</h2>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantGold"
+            className="inline-flex items-center gap-2 rounded-md bg-radiantPink px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90"
           >
             Contact us <ArrowUpRight size={18} />
           </Link>

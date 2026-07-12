@@ -65,7 +65,7 @@ export default function BlogPostPage({ params }: PostPageProps) {
             </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
-            <Image src={post.image} alt="" fill priority className="object-cover" />
+            <Image src={post.image} alt="" fill priority sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover object-top" />
           </div>
         </div>
       </section>
@@ -94,13 +94,13 @@ export default function BlogPostPage({ params }: PostPageProps) {
             <div className="rounded-md bg-white p-6 shadow-sm">
               <h2 className="font-display text-3xl text-radiantInk">Share</h2>
               <div className="mt-5 grid gap-2 text-sm font-black uppercase tracking-[0.12em] text-radiantInk">
-                <a href={`https://wa.me/?text=${shareText}%20${shareUrl}`} className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantGold">
+                <a href={`https://wa.me/?text=${shareText}%20${shareUrl}`} className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantCream">
                   WhatsApp
                 </a>
-                <a href={`mailto:?subject=${shareText}&body=${shareUrl}`} className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantGold">
+                <a href={`mailto:?subject=${shareText}&body=${shareUrl}`} className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantCream">
                   Email
                 </a>
-                <Link href="/contact" className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantGold">
+                <Link href="/contact" className="rounded-md bg-radiantCream px-4 py-3 hover:bg-radiantCream">
                   Collaborate
                 </Link>
               </div>

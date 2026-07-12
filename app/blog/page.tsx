@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BlogCard } from "@/components/BlogCard";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { PageHero } from "@/components/PageHero";
 import { blogCategories, blogPosts, brand } from "@/lib/site-data";
 
 export const metadata = {
@@ -22,15 +23,12 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
-      <section className="bg-radiantInk py-20 text-white">
-        <div className="container-sr">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">The blog</p>
-          <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">
-            Beauty, self-care, fashion, wellness, and creator notes.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">{brand.description}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="The blog"
+        title="Beauty, self-care, fashion, wellness, and creator notes."
+        description={brand.description}
+        image="/images/stay-radiant-founder.png"
+      />
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr">
@@ -42,7 +40,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
                   key={category}
                   href={category === "All" ? "/blog" : `/blog?category=${encodeURIComponent(category)}`}
                   className={`whitespace-nowrap rounded-md px-4 py-3 text-sm font-black uppercase tracking-[0.12em] transition ${
-                    active ? "bg-radiantPink text-white" : "bg-white text-radiantInk hover:bg-radiantGold"
+                    active ? "bg-radiantPink text-white" : "bg-white text-radiantInk hover:bg-radiantCream"
                   }`}
                 >
                   {category}

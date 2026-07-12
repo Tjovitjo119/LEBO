@@ -1,6 +1,8 @@
+import { MessageCircle, Send } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { brand, contactDetails } from "@/lib/site-data";
+import { PageHero } from "@/components/PageHero";
+import { brand, contactDetails, whatsappUrl } from "@/lib/site-data";
 
 export const metadata = {
   title: "Contact"
@@ -9,33 +11,57 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-radiantInk py-20 text-white">
-        <div className="container-sr">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
-          <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Let&apos;s connect.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
-            Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
-          </p>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's connect."
+        description="Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here."
+        image="/images/stay-radiant-hero.png"
+      >
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:brightness-95"
+          >
+            <MessageCircle size={18} /> Chat on WhatsApp
+          </a>
+          <a
+            href={`mailto:${brand.email}`}
+            className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantCream"
+          >
+            <Send size={18} /> Email Stay Radiant
+          </a>
         </div>
-      </section>
+      </PageHero>
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="grid content-start gap-4">
             {contactDetails.map(({ label, value, icon: Icon }) => (
-              <div key={label} className="rounded-md border border-radiantInk/10 bg-white p-6 shadow-sm">
+              <div key={label} className="rounded-md border border-radiantInk/10 bg-white p-6 shadow-sm transition hover:shadow-glow">
                 <div className="mb-3 grid h-11 w-11 place-items-center rounded-md bg-radiantPink/10 text-radiantPink">
                   <Icon size={21} />
                 </div>
                 <p className="text-sm font-black uppercase tracking-[0.14em] text-radiantMuted">{label}</p>
-                <p className="mt-1 font-bold text-radiantInk">{value}</p>
+                {label === "Email" ? (
+                  <a href={`mailto:${value}`} className="mt-1 block font-bold text-radiantInk hover:text-radiantPink">
+                    {value}
+                  </a>
+                ) : label === "Phone" ? (
+                  <a href={whatsappUrl} target="_blank" rel="noreferrer noopener" className="mt-1 block font-bold text-radiantInk hover:text-radiantPink">
+                    {value} (WhatsApp)
+                  </a>
+                ) : (
+                  <p className="mt-1 font-bold text-radiantInk">{value}</p>
+                )}
               </div>
             ))}
-            <div className="rounded-md bg-radiantInk p-7 text-white">
-              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Business details</p>
+            <div className="rounded-md border border-radiantInk/10 bg-white p-7 text-radiantInk shadow-sm">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Business details</p>
               <p className="mt-4 text-lg font-black">{brand.legalName}</p>
-              <p className="mt-2 text-sm text-white/72">Registration: {brand.registration}</p>
-              <p className="mt-2 text-sm text-white/72">Domain target: {brand.domain}</p>
+              <p className="mt-2 text-sm text-radiantMuted">Registration: {brand.registration}</p>
+              <p className="mt-2 text-sm text-radiantMuted">Domain target: {brand.domain}</p>
             </div>
           </div>
           <ContactForm />
