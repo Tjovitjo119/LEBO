@@ -23,12 +23,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
-      <PageHero
-        eyebrow="The blog"
-        title="Beauty, self-care, fashion, wellness, and creator notes."
-        description={brand.description}
-        image="/images/stay-radiant-founder.png"
-      />
+      <PageHero eyebrow="The blog" title={brand.description} image="/images/fashion.jpeg" />
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr">
@@ -60,13 +55,6 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
             </div>
 
             <aside className="grid content-start gap-5">
-              <div className="rounded-md bg-white p-6 shadow-sm">
-                <h2 className="font-display text-3xl text-radiantInk">About Stay Radiant</h2>
-                <p className="mt-3 text-sm leading-6 text-radiantMuted">
-                  A Johannesburg-born blog for diverse young women exploring self-care, beauty, creative work, and
-                  personal expansion.
-                </p>
-              </div>
               <div className="rounded-md bg-white p-6 shadow-sm">
                 <h2 className="font-display text-3xl text-radiantInk">Join the list</h2>
                 <p className="mt-3 text-sm leading-6 text-radiantMuted">New posts and launch updates in your inbox.</p>

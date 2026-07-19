@@ -28,22 +28,18 @@ export function Navbar() {
       className={
         isHome && !menuOpen
           ? "absolute inset-x-0 top-0 z-40 bg-transparent"
-          : "sticky top-0 z-40 border-b border-radiantInk/10 bg-radiantCream/95 backdrop-blur"
+          : "sticky top-0 z-40 bg-radiantOrange/95 backdrop-blur"
       }
     >
       <nav className="container-sr flex min-h-20 items-center justify-between gap-4">
-        <BrandMark inverted={isHome && !menuOpen} compact={isHome} />
+        <BrandMark inverted={!menuOpen} compact={isHome} />
 
         <div className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={
-                isHome
-                  ? "rounded-md px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white/85 transition hover:text-radiantGold"
-                  : "rounded-md px-3 py-2 text-sm font-bold text-radiantInk/75 transition hover:bg-radiantPink hover:text-white"
-              }
+              className="rounded-md px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white/85 transition hover:text-radiantGold"
             >
               {link.label}
             </Link>
@@ -58,7 +54,7 @@ export function Navbar() {
           className={
             isHome && !menuOpen
               ? "grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition hover:bg-white hover:text-radiantInk lg:hidden"
-              : "grid h-11 w-11 place-items-center rounded-md border border-radiantInk/15 bg-white text-radiantInk transition hover:bg-radiantPink hover:text-white lg:hidden"
+              : "grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition hover:bg-white hover:text-radiantOrange lg:hidden"
           }
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -66,13 +62,13 @@ export function Navbar() {
       </nav>
 
       {menuOpen ? (
-        <div className="fixed inset-x-0 top-20 z-30 flex h-[calc(100vh-5rem)] flex-col justify-center overflow-y-auto bg-radiantCream lg:hidden">
+        <div className="fixed inset-x-0 top-20 z-30 flex h-[calc(100vh-5rem)] flex-col justify-center overflow-y-auto bg-radiantOrange lg:hidden">
           <div className="container-sr grid gap-2 py-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-4 py-4 font-display text-3xl text-radiantInk transition hover:bg-radiantPink hover:text-white"
+                className="rounded-md px-4 py-4 font-display text-3xl text-white transition hover:bg-white hover:text-radiantOrange"
               >
                 {link.label}
               </Link>

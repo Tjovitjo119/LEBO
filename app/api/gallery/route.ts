@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 const launchImages = [
-  { title: "Stay Radiant editorial hero", imageUrl: "/images/stay-radiant-hero.png", category: "Editorial" },
-  { title: "Founder studio portrait", imageUrl: "/images/stay-radiant-founder.png", category: "Founder" },
-  { title: "Beauty flatlay", imageUrl: "/images/stay-radiant-flatlay.png", category: "Blog" }
+  { title: "Fashion editorial", imageUrl: "/images/fashion.jpeg", category: "Fashion" },
+  { title: "Skincare essentials", imageUrl: "/images/skincare.jpeg", category: "Skincare" },
+  { title: "Wellness lifestyle", imageUrl: "/images/wellness.jpeg", category: "Wellness" }
 ];
 
 export const dynamic = "force-dynamic";

@@ -12,7 +12,7 @@ const socialIcons = [
 
 export function Footer() {
   return (
-    <footer className="bg-radiantPink text-white">
+    <footer className="bg-radiantOrange text-white">
       <div className="container-sr grid gap-10 py-12 md:grid-cols-[1.1fr_0.8fr_0.8fr]">
         <div>
           <h2 className="mb-4 text-sm font-black uppercase text-radiantGold">Instagram</h2>

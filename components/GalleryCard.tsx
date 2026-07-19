@@ -5,10 +5,10 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const editorialImages = [
-  { title: "Stay Radiant editorial hero", imageUrl: "/images/stay-radiant-hero.png" },
-  { title: "Founder studio portrait", imageUrl: "/images/stay-radiant-founder.png" },
-  { title: "Beauty and wellness flatlay", imageUrl: "/images/stay-radiant-flatlay.png" },
-  { title: "Merch preview", imageUrl: "/images/stay-radiant-merch.png" }
+  { title: "Fashion editorial", imageUrl: "/images/fashion.jpeg" },
+  { title: "Skincare essentials", imageUrl: "/images/skincare.jpeg" },
+  { title: "Wellness lifestyle", imageUrl: "/images/wellness.jpeg" },
+  { title: "Style lookbook", imageUrl: "/images/fashion 01.jpeg" }
 ];
 
 export function GalleryGrid() {

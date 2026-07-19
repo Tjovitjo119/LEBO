@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
       "A gentle beauty reset for days when you want skin-first radiance without turning your mirror into a full production set.",
     date: "June 2026",
     readTime: "4 min read",
-    image: "/images/stay-radiant-flatlay.png",
+    image: "/images/skincare.jpeg",
     featured: true,
     tags: ["beauty", "selfcare", "glow"],
     content: [
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
       "A practical way to simplify products, protect your barrier, and keep only the formulas that earn their place.",
     date: "June 2026",
     readTime: "5 min read",
-    image: "/images/stay-radiant-flatlay.png",
+    image: "/images/skincare 01.jpeg",
     tags: ["skincare", "routine", "barrier"],
     content: [
       "A shelf edit starts with honesty. Pull every product into one place, check what has expired, and separate daily essentials from products you reach for only when your skin is stressed.",
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
       "Gallery mornings, slow coffee, market finds, and the kind of reset that makes Monday feel less sharp around the edges.",
     date: "June 2026",
     readTime: "6 min read",
-    image: "/images/stay-radiant-hero.png",
+    image: "/images/fashion.jpeg",
     tags: ["lifestyle", "johannesburg", "community"],
     content: [
       "A restorative weekend does not need to leave the city. Start with a gallery or market, then give yourself enough time to wander without turning the day into another checklist.",
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
       "A softer look at rituals that support your actual life instead of becoming another standard to chase.",
     date: "June 2026",
     readTime: "4 min read",
-    image: "/images/stay-radiant-founder.png",
+    image: "/images/wellness.jpeg",
     tags: ["wellness", "mental-health", "rituals"],
     content: [
       "Wellness becomes powerful when it is honest. Some days the ritual is a workout, and some days it is drinking water, replying to one message, and closing the laptop on time.",
@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
       "Three editorial habits emerging creators can use to make their online presence feel sharper, clearer, and more memorable.",
     date: "June 2026",
     readTime: "5 min read",
-    image: "/images/stay-radiant-founder.png",
+    image: "/images/fashion 01.jpeg",
     tags: ["fashion", "branding", "creators"],
     content: [
       "Fashion media trains your eye to notice consistency. The strongest personal brands repeat colour, framing, tone, and point of view until people can recognise them before seeing a name.",
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
       "Social platforms are useful, but a dedicated blog gives creators ownership, search visibility, and a stronger path to passive income.",
     date: "June 2026",
     readTime: "7 min read",
-    image: "/images/stay-radiant-flatlay.png",
+    image: "/images/fashion 02.jpeg",
     tags: ["blogging", "income", "creators"],
     content: [
       "A blog gives creators a home base. Social platforms can introduce your voice, but a website lets readers search, save, revisit, and move through your content on your terms.",
@@ -256,26 +256,22 @@ export const journalEntries = [
   }
 ];
 
-export const editorialInfluences = ["Vogue", "Elle", "Glamour", "People", "Cosmopolitan"];
-
-// Placeholder grid until the client supplies real Instagram photos.
 export const footerGallery = [
-  "/images/stay-radiant-flatlay.png",
-  "/images/stay-radiant-founder.png",
-  "/images/stay-radiant-hero.png",
-  "/images/stay-radiant-merch.png",
-  "/images/stay-radiant-flatlay.png",
-  "/images/stay-radiant-founder.png",
-  "/images/stay-radiant-hero.png",
-  "/images/stay-radiant-merch.png"
+  "/images/fashion.jpeg",
+  "/images/skincare.jpeg",
+  "/images/wellness.jpeg",
+  "/images/fashion 01.jpeg",
+  "/images/skincare 01.jpeg",
+  "/images/wellness 01.jpeg",
+  "/images/fashion 02.jpeg",
+  "/images/homepage.jpeg"
 ];
 
-// Placeholder wordmarks until the client supplies real partner logo files.
 export const collaborations = [
-  { name: "Digital Girl Africa" },
-  { name: "FOUURA" },
-  { name: "Edladleni Art Gallery" },
-  { name: "Sisley Paris" }
+  { name: "Digital Girl Africa", logo: "/images/collab-digital-girl-africa.png" },
+  { name: "FOUURA", logo: "/images/collab-fouura.png" },
+  { name: "Edladleni Art Gallery", logo: "/images/collab-edladleni.png" },
+  { name: "Sisley Paris", logo: "/images/collab-sisley.png" }
 ];
 
 export const contactDetails: Array<{ label: string; value: string; icon: LucideIcon }> = [

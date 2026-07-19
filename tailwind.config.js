@@ -7,6 +7,7 @@ const config = {
         radiantPink: "#D4537E",
         radiantCoral: "#F0997B",
         radiantGold: "#FAC775",
+        radiantOrange: "#F2761F",
         radiantCream: "#F5F0E8",
         radiantWhite: "#FAFAFA",
         radiantInk: "#1A1A1A",

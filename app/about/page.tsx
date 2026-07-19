@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { brand, brandValues, missionPillars } from "@/lib/site-data";
 
 export const metadata = {
@@ -11,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-radiantPink py-24 text-white">
-        <Image src="/images/stay-radiant-founder.png" alt="" fill sizes="100vw" className="object-cover object-top opacity-35" />
+        <Image src="/images/skincare 02.jpeg" alt="" fill sizes="100vw" className="object-cover object-top opacity-35" />
         <div className="absolute inset-0 bg-radiantPink/55" />
         <div className="container-sr relative">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">About us</p>
@@ -19,11 +17,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-sr bg-radiantCream">
+      <section className="section-sr bg-white">
+        <div className="container-sr max-w-3xl text-center">
+          <p className="font-display text-2xl italic leading-relaxed text-radiantInk sm:text-3xl">
+            Stay Radiant exists to help women stay curious, expressive, and unapologetically themselves. We seek out
+            what&apos;s best in beauty, self-care, style, and lifestyle, through honest storytelling, considered
+            curation, and a community that sparks confidence.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-sr bg-white">
         <div className="container-sr grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="group relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
             <Image
-              src="/images/stay-radiant-founder.png"
+              src="/images/fashion 02.jpeg"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
@@ -31,8 +39,7 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Founder story</p>
-            <h2 className="mt-4 font-display text-5xl leading-tight text-radiantInk">Lebohang Ramakau built Stay Radiant from a gap she could feel.</h2>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">About our Radiant Founder</p>
             <div className="mt-6 grid gap-5 text-lg leading-8 text-radiantMuted">
               <p>
                 Lebohang holds a Fashion Media degree and founded {brand.legalName} in 2023 after being inspired by her
@@ -44,9 +51,6 @@ export default function AboutPage() {
                 monetisable home for beauty, self-care, fashion, and lifestyle content.
               </p>
             </div>
-            <blockquote className="mt-8 border-l-4 border-radiantPink pl-5 font-display text-3xl leading-tight text-radiantInk">
-              &quot;Blogging opens a path for creators and entrepreneurs to build passive income while exploring their passions.&quot;
-            </blockquote>
           </div>
         </div>
       </section>
@@ -89,32 +93,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section-sr bg-radiantCream">
-        <div className="container-sr">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Team structure</p>
-            <h2 className="mt-4 font-display text-5xl leading-tight text-radiantInk">Built to grow from founder-led publishing into a creator platform.</h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              "CEO & Founder: Lebohang Ramakau",
-              "Production: Blog Publisher and Software Developers",
-              "Marketing: Social Media Intern and UI Experience Designer"
-            ].map((item) => (
-              <div key={item} className="rounded-md bg-white p-6 text-lg font-black text-radiantInk shadow-sm">
-                {item}
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk shadow-sm transition hover:bg-radiantCream"
-          >
-            Contact us <ArrowUpRight size={18} />
-          </Link>
         </div>
       </section>
     </>

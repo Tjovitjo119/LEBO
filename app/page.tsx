@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="overflow-hidden bg-radiantPink py-4 text-white">
+      <section className="overflow-hidden bg-radiantOrange py-4 text-white">
         <div className="ticker-track flex w-[200%] gap-10 whitespace-nowrap text-sm font-black uppercase tracking-[0.24em]">
           {Array.from({ length: 12 }).map((_, index) => (
             <span key={index}>{ticker}</span>
@@ -28,14 +28,16 @@ export default function HomePage() {
         <div className="container-sr">
           <Reveal>
             <p className="mb-5 text-center text-xs font-black uppercase tracking-[0.2em] text-radiantPink">Collaborations</p>
-            <div className="grid gap-x-3 gap-y-3 text-center font-display text-2xl text-radiantInk sm:grid-cols-4">
+            <div className="grid gap-x-3 gap-y-3 sm:grid-cols-4">
               {collaborations.map((partner) => (
-                <span
+                <div
                   key={partner.name}
-                  className="hover-lift rounded-md bg-white px-4 py-5 shadow-sm transition-colors hover:bg-radiantPink hover:text-white hover:shadow-glow"
+                  className="hover-lift flex h-24 items-center justify-center rounded-md bg-white p-4 shadow-sm transition-shadow hover:shadow-glow"
                 >
-                  {partner.name}
-                </span>
+                  <div className="relative h-full w-full">
+                    <Image src={partner.logo} alt={partner.name} fill sizes="200px" className="object-contain" />
+                  </div>
+                </div>
               ))}
             </div>
           </Reveal>
@@ -82,19 +84,19 @@ export default function HomePage() {
           </div>
           <Link
             href="/services"
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-radiantPink px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-radiantOrange px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:opacity-90"
           >
             Explore services <ArrowUpRight size={18} />
           </Link>
         </div>
       </section>
 
-      <section className="section-sr bg-radiantCream">
+      <section className="section-sr bg-white">
         <div className="container-sr grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <div className="group relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
               <Image
-                src="/images/stay-radiant-founder.png"
+                src="/images/wellness 01.jpeg"
                 alt=""
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -135,7 +137,7 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div className="flex h-full items-center bg-radiantPink px-8 py-16 text-white sm:px-14">
+            <div className="flex h-full items-center bg-radiantOrange px-8 py-16 text-white sm:px-14">
               <blockquote className="font-display text-4xl leading-tight">
                 &quot;Blogging allows creators to generate passive income while exploring their passions online.&quot;
                 <span className="mt-6 block text-base font-sans font-semibold normal-case text-white/80">

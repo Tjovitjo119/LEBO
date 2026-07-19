@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Stay Radiant",
     description:
       "Beauty, self-care, fashion, wellness, and creator-led lifestyle content from Johannesburg.",
-    images: ["/images/stay-radiant-hero.png"]
+    images: ["/images/homepage.jpeg"]
   }
 };
 

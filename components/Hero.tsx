@@ -5,10 +5,10 @@ import { brand } from "@/lib/site-data";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-radiantMuted text-white sm:bg-radiantPink">
+    <section className="relative overflow-hidden bg-radiantMuted text-white sm:bg-radiantOrange">
       {/* Mobile: show the full photo, uncropped (source is 2:1, too wide to fill a tall phone screen without cropping most of it out) */}
       <div className="relative aspect-[2/1] w-full sm:hidden">
-        <Image src="/images/stay-radiant-hero.png" alt="" fill priority sizes="100vw" className="object-cover" />
+        <Image src="/images/homepage.jpeg" alt="" fill priority sizes="100vw" className="object-cover" />
       </div>
       <div className="px-6 py-10 text-center sm:hidden">
         <h1 className="font-display text-4xl leading-[0.95]">{brand.name}</h1>
@@ -26,14 +26,14 @@ export function Hero() {
       {/* Tablet and up: full-bleed hero with overlaid copy */}
       <div className="relative hidden sm:block sm:min-h-[85vh] md:min-h-screen">
         <Image
-          src="/images/stay-radiant-hero.png"
+          src="/images/homepage.jpeg"
           alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover object-top"
         />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-radiantPink/80 via-radiantPink/30 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-radiantOrange/80 via-radiantOrange/30 to-transparent" />
 
         <div className="container-sr relative flex min-h-[85vh] flex-col items-center justify-end pb-16 pt-28 text-center md:min-h-screen md:pb-20 md:pt-32">
           <div className="mx-auto max-w-3xl">
