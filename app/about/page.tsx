@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="container-sr grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="group relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
             <Image
-              src="/images/fashion 02.jpeg"
+              src="/images/stay-radiant-founder.png"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"

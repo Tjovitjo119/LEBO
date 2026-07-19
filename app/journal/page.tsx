@@ -20,7 +20,7 @@ export default function JournalPage() {
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-md shadow-sm">
-            <Image src="/images/wellness 01.jpeg" alt="" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
+            <Image src="/images/fashion 01.jpeg" alt="" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
           </div>
         </div>
       </section>

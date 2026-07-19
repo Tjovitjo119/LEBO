@@ -15,7 +15,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's connect."
         description="Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here."
-        image="/images/wellness.jpeg"
+        image="/images/stay-radiant-hero.png"
         tone="orange"
       >
         <div className="mt-8 flex flex-wrap gap-3">

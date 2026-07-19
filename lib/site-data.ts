@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
       "A gentle beauty reset for days when you want skin-first radiance without turning your mirror into a full production set.",
     date: "June 2026",
     readTime: "4 min read",
-    image: "/images/skincare.jpeg",
+    image: "/images/stay-radiant-flatlay.png",
     featured: true,
     tags: ["beauty", "selfcare", "glow"],
     content: [
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
       "Gallery mornings, slow coffee, market finds, and the kind of reset that makes Monday feel less sharp around the edges.",
     date: "June 2026",
     readTime: "6 min read",
-    image: "/images/fashion.jpeg",
+    image: "/images/stay-radiant-hero.png",
     tags: ["lifestyle", "johannesburg", "community"],
     content: [
       "A restorative weekend does not need to leave the city. Start with a gallery or market, then give yourself enough time to wander without turning the day into another checklist.",
@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
       "Three editorial habits emerging creators can use to make their online presence feel sharper, clearer, and more memorable.",
     date: "June 2026",
     readTime: "5 min read",
-    image: "/images/fashion 01.jpeg",
+    image: "/images/stay-radiant-founder.png",
     tags: ["fashion", "branding", "creators"],
     content: [
       "Fashion media trains your eye to notice consistency. The strongest personal brands repeat colour, framing, tone, and point of view until people can recognise them before seeing a name.",
@@ -258,13 +258,13 @@ export const journalEntries = [
 
 export const footerGallery = [
   "/images/fashion.jpeg",
+  "/images/stay-radiant-founder.png",
   "/images/skincare.jpeg",
+  "/images/stay-radiant-flatlay.png",
   "/images/wellness.jpeg",
+  "/images/stay-radiant-hero.png",
   "/images/fashion 01.jpeg",
-  "/images/skincare 01.jpeg",
-  "/images/wellness 01.jpeg",
-  "/images/fashion 02.jpeg",
-  "/images/homepage.jpeg"
+  "/images/stay-radiant-merch.png"
 ];
 
 export const collaborations = [

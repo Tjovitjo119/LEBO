@@ -6,9 +6,9 @@ import { X } from "lucide-react";
 
 const editorialImages = [
   { title: "Fashion editorial", imageUrl: "/images/fashion.jpeg" },
+  { title: "Founder studio portrait", imageUrl: "/images/stay-radiant-founder.png" },
   { title: "Skincare essentials", imageUrl: "/images/skincare.jpeg" },
-  { title: "Wellness lifestyle", imageUrl: "/images/wellness.jpeg" },
-  { title: "Style lookbook", imageUrl: "/images/fashion 01.jpeg" }
+  { title: "Beauty flatlay", imageUrl: "/images/stay-radiant-flatlay.png" }
 ];
 
 export function GalleryGrid() {
