@@ -16,12 +16,12 @@ export function Hero() {
           sizes="100vw"
           className="h-auto w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-black/30" />
 
-        <div className="absolute inset-x-0 bottom-0 px-6 pb-10 sm:pb-14 md:pb-16">
-          <div className="mx-auto max-w-7xl">
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <div className="text-center">
             <h1 className="font-display text-4xl leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">{brand.name}</h1>
-            <p className="mt-4 max-w-lg text-base font-medium leading-7 text-white/90 sm:text-lg sm:leading-8">
+            <p className="mx-auto mt-4 max-w-lg text-base font-medium leading-7 text-white/90 sm:text-lg sm:leading-8">
               {brand.tagline}
             </p>
             <div className="mt-6">
