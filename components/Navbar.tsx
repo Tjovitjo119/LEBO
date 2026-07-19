@@ -25,11 +25,7 @@ export function Navbar() {
 
   return (
     <header
-      className={
-        isHome && !menuOpen
-          ? "absolute inset-x-0 top-0 z-40 bg-transparent"
-          : "sticky top-0 z-40 bg-radiantOrange/95 backdrop-blur"
-      }
+      className="sticky top-0 z-40 bg-radiantOrange"
     >
       <nav className="container-sr flex min-h-20 items-center justify-between gap-4">
         <BrandMark inverted={!menuOpen} compact={isHome} />
@@ -51,11 +47,7 @@ export function Navbar() {
           onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
-          className={
-            isHome && !menuOpen
-              ? "grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition hover:bg-white hover:text-radiantInk lg:hidden"
-              : "grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition hover:bg-white hover:text-radiantOrange lg:hidden"
-          }
+          className="grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition hover:bg-white hover:text-radiantOrange lg:hidden"
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
