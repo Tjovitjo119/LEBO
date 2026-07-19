@@ -8,10 +8,11 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-radiantInk py-24 text-white">
-        <Image src="/images/skincare 02.jpeg" alt="" fill sizes="100vw" className="object-cover object-top opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-        <div className="container-sr relative">
+      <section className="overflow-hidden bg-radiantInk text-white">
+        <div className="relative w-full">
+          <Image src="/images/skincare 02.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full object-contain" />
+        </div>
+        <div className="container-sr px-6 py-12 sm:py-16">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">About us</p>
           <h1 className="mt-4 max-w-4xl font-display text-6xl leading-tight md:text-7xl">Meet the woman behind the brand.</h1>
         </div>

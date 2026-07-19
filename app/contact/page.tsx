@@ -11,13 +11,14 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-radiantInk py-24 text-white sm:py-28">
-        <Image src="/images/wellness.jpeg" alt="" fill priority sizes="100vw" className="object-cover opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="container-sr relative">
+      <section className="overflow-hidden bg-radiantInk text-white">
+        <div className="relative w-full">
+          <Image src="/images/wellness.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full object-contain" />
+        </div>
+        <div className="container-sr px-6 py-12 sm:py-16">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
           <h1 className="mt-4 max-w-3xl font-display text-5xl leading-tight sm:text-6xl md:text-7xl">Let&apos;s connect.</h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-white/90">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-white/85">
             Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
