@@ -12,30 +12,30 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-radiantInk text-white">
-        <div className="relative w-full">
-          <Image src="/images/wellness.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
-          <div className="absolute inset-0 bg-black/30" />
+        <div className="relative h-[40vh] w-full sm:h-[45vh]">
+          <Image src="/images/wellness.jpeg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+          <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="text-center">
               <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
-              <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">Let&apos;s connect.</h1>
-              <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/90 sm:text-lg">
+              <h1 className="mx-auto mt-3 max-w-3xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl">Let&apos;s connect.</h1>
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/90 sm:text-base">
                 Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
               </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <div className="mt-5 flex flex-wrap justify-center gap-3">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:brightness-110"
+                  className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-5 py-3 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:brightness-110"
                 >
-                  <MessageCircle size={18} /> Chat on WhatsApp
+                  <MessageCircle size={16} /> Chat on WhatsApp
                 </a>
                 <a
                   href={`mailto:${brand.email}`}
-                  className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantCream"
+                  className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantCream"
                 >
-                  <Send size={18} /> Email Stay Radiant
+                  <Send size={16} /> Email Stay Radiant
                 </a>
               </div>
             </div>

@@ -11,14 +11,14 @@ export default function JournalPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-radiantInk text-white">
-        <div className="relative w-full">
-          <Image src="/images/fashion 01.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
-          <div className="absolute inset-0 bg-black/30" />
+        <div className="relative h-[40vh] w-full sm:h-[45vh]">
+          <Image src="/images/fashion 01.jpeg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+          <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="text-center">
               <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Journal</p>
-              <h1 className="mx-auto mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">The strategy behind the glow.</h1>
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+              <h1 className="mx-auto mt-3 max-w-4xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl">The strategy behind the glow.</h1>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">
                 Founder notes, editorial thinking, and platform ideas for the next stage of Stay Radiant.
               </p>
             </div>

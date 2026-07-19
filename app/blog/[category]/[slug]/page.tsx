@@ -53,15 +53,15 @@ export default function BlogPostPage({ params }: PostPageProps) {
   return (
     <>
       <section className="relative overflow-hidden bg-radiantInk text-white">
-        <div className="relative w-full">
-          <Image src={post.image} alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
-          <div className="absolute inset-0 bg-black/30" />
+        <div className="relative h-[40vh] w-full sm:h-[45vh]">
+          <Image src={post.image} alt="" fill priority sizes="100vw" className="object-cover object-center" />
+          <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="text-center">
               <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">{post.category}</p>
-              <h1 className="mx-auto mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">{post.title}</h1>
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">{post.excerpt}</p>
-              <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm font-bold text-white/70">
+              <h1 className="mx-auto mt-3 max-w-4xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl">{post.title}</h1>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">{post.excerpt}</p>
+              <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs font-bold text-white/70">
                 <span>By {brand.founder}</span>
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
