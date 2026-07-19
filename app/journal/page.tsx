@@ -37,7 +37,7 @@ export default function JournalPage() {
         </div>
       </section>
 
-      <section className="bg-radiantCream py-16 text-radiantInk">
+      <section className="bg-white py-16 text-radiantInk">
         <div className="container-sr flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <h2 className="max-w-3xl font-display text-5xl leading-tight">Ready to collaborate on the next chapter?</h2>
           <Link

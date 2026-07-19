@@ -59,7 +59,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-sr bg-white">
+      <section className="section-sr bg-radiantCream">
         <div className="container-sr">
           <div className="mb-10 max-w-3xl">
             <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantPink">Mission, vision, purpose</p>

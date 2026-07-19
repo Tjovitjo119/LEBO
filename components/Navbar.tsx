@@ -9,7 +9,6 @@ import { BrandMark } from "@/components/BrandMark";
 
 export function Navbar() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -28,7 +27,7 @@ export function Navbar() {
       className="sticky top-0 z-40 bg-radiantOrange"
     >
       <nav className="container-sr flex min-h-20 items-center justify-between gap-4">
-        <BrandMark inverted={!menuOpen} compact={isHome} />
+        <BrandMark inverted={!menuOpen} />
 
         <div className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
