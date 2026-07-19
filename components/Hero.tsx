@@ -5,7 +5,7 @@ import { brand } from "@/lib/site-data";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-radiantMuted text-white sm:bg-radiantOrange">
+    <section className="relative overflow-hidden bg-radiantMuted text-white sm:bg-radiantInk">
       {/* Mobile: show the full photo, uncropped (source is 2:1, too wide to fill a tall phone screen without cropping most of it out) */}
       <div className="relative aspect-[2/1] w-full sm:hidden">
         <Image src="/images/homepage.jpeg" alt="" fill priority sizes="100vw" className="object-cover" />
@@ -33,7 +33,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-top"
         />
-        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-radiantOrange/80 via-radiantOrange/30 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
         <div className="container-sr relative flex min-h-[85vh] flex-col items-center justify-end pb-16 pt-28 text-center md:min-h-screen md:pb-20 md:pt-32">
           <div className="mx-auto max-w-3xl">
