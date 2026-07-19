@@ -69,7 +69,6 @@ export default function BlogPostPage({ params }: PostPageProps) {
             </div>
           </div>
         </div>
-        </div>
       </section>
 
       <article className="section-sr bg-radiantCream">
