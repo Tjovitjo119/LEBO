@@ -52,21 +52,23 @@ export default function BlogPostPage({ params }: PostPageProps) {
 
   return (
     <>
-      <section className="bg-radiantPink text-white">
-        <div className="container-sr grid gap-10 py-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">{post.category}</p>
-            <h1 className="mt-4 font-display text-5xl leading-tight md:text-7xl">{post.title}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">{post.excerpt}</p>
-            <div className="mt-6 flex flex-wrap gap-3 text-sm font-bold text-white/70">
-              <span>By {brand.founder}</span>
-              <span>{post.date}</span>
-              <span>{post.readTime}</span>
+      <section className="relative overflow-hidden bg-radiantInk text-white">
+        <div className="relative w-full">
+          <Image src={post.image} alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="text-center">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">{post.category}</p>
+              <h1 className="mx-auto mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">{post.title}</h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">{post.excerpt}</p>
+              <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm font-bold text-white/70">
+                <span>By {brand.founder}</span>
+                <span>{post.date}</span>
+                <span>{post.readTime}</span>
+              </div>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
-            <Image src={post.image} alt="" fill priority sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover object-top" />
-          </div>
+        </div>
         </div>
       </section>
 

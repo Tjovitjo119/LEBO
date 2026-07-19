@@ -10,17 +10,18 @@ export const metadata = {
 export default function JournalPage() {
   return (
     <>
-      <section className="bg-radiantInk py-20 text-white">
-        <div className="container-sr grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Journal</p>
-            <h1 className="mt-4 font-display text-6xl leading-tight md:text-7xl">The strategy behind the glow.</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
-              Founder notes, editorial thinking, and platform ideas for the next stage of Stay Radiant.
-            </p>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-md shadow-sm">
-            <Image src="/images/fashion 01.jpeg" alt="" fill sizes="(max-width: 1024px) 100vw, 45vw" className="object-cover" />
+      <section className="relative overflow-hidden bg-radiantInk text-white">
+        <div className="relative w-full">
+          <Image src="/images/fashion 01.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="text-center">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Journal</p>
+              <h1 className="mx-auto mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">The strategy behind the glow.</h1>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+                Founder notes, editorial thinking, and platform ideas for the next stage of Stay Radiant.
+              </p>
+            </div>
           </div>
         </div>
       </section>

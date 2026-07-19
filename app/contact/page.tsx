@@ -11,31 +11,34 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="overflow-hidden bg-radiantInk text-white">
+      <section className="relative overflow-hidden bg-radiantInk text-white">
         <div className="relative w-full">
-          <Image src="/images/wellness.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full object-contain" />
-        </div>
-        <div className="container-sr px-6 py-12 sm:py-16">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl leading-tight sm:text-6xl md:text-7xl">Let&apos;s connect.</h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-white/85">
-            Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:brightness-110"
-            >
-              <MessageCircle size={18} /> Chat on WhatsApp
-            </a>
-            <a
-              href={`mailto:${brand.email}`}
-              className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantCream"
-            >
-              <Send size={18} /> Email Stay Radiant
-            </a>
+          <Image src="/images/wellness.jpeg" alt="" width={1774} height={887} priority sizes="100vw" className="h-auto w-full" />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="text-center">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-radiantGold">Contact</p>
+              <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">Let&apos;s connect.</h1>
+              <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/90 sm:text-lg">
+                Collaborations, partnerships, reader messages, course interest, and launch enquiries all start here.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-2 rounded-md bg-[#25D366] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:brightness-110"
+                >
+                  <MessageCircle size={18} /> Chat on WhatsApp
+                </a>
+                <a
+                  href={`mailto:${brand.email}`}
+                  className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-radiantInk transition hover:bg-radiantCream"
+                >
+                  <Send size={18} /> Email Stay Radiant
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
