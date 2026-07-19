@@ -23,7 +23,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
-      <PageHero eyebrow="The blog" title={brand.description} image="/images/fashion 02.jpeg" />
+      <PageHero eyebrow="The blog" title={brand.description} image="/images/fashion-02.jpeg" />
 
       <section className="section-sr bg-radiantCream">
         <div className="container-sr">

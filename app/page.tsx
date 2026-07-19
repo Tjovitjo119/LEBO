@@ -96,7 +96,7 @@ export default function HomePage() {
           <Reveal>
             <div className="group relative aspect-[4/5] overflow-hidden rounded-md shadow-sm">
               <Image
-                src="/images/fashion 01.jpeg"
+                src="/images/fashion-01.jpeg"
                 alt=""
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

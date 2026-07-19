@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
       "A practical way to simplify products, protect your barrier, and keep only the formulas that earn their place.",
     date: "June 2026",
     readTime: "5 min read",
-    image: "/images/skincare 01.jpeg",
+    image: "/images/skincare-01.jpeg",
     tags: ["skincare", "routine", "barrier"],
     content: [
       "A shelf edit starts with honesty. Pull every product into one place, check what has expired, and separate daily essentials from products you reach for only when your skin is stressed.",
@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
       "Three editorial habits emerging creators can use to make their online presence feel sharper, clearer, and more memorable.",
     date: "June 2026",
     readTime: "5 min read",
-    image: "/images/fashion 01.jpeg",
+    image: "/images/fashion-01.jpeg",
     tags: ["fashion", "branding", "creators"],
     content: [
       "Fashion media trains your eye to notice consistency. The strongest personal brands repeat colour, framing, tone, and point of view until people can recognise them before seeing a name.",
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
       "Social platforms are useful, but a dedicated blog gives creators ownership, search visibility, and a stronger path to passive income.",
     date: "June 2026",
     readTime: "7 min read",
-    image: "/images/fashion 02.jpeg",
+    image: "/images/fashion-02.jpeg",
     tags: ["blogging", "income", "creators"],
     content: [
       "A blog gives creators a home base. Social platforms can introduce your voice, but a website lets readers search, save, revisit, and move through your content on your terms.",
@@ -260,10 +260,10 @@ export const footerGallery = [
   "/images/fashion.jpeg",
   "/images/skincare.jpeg",
   "/images/wellness.jpeg",
-  "/images/fashion 01.jpeg",
-  "/images/skincare 01.jpeg",
-  "/images/wellness 01.jpeg",
-  "/images/fashion 02.jpeg",
+  "/images/fashion-01.jpeg",
+  "/images/skincare-01.jpeg",
+  "/images/wellness-01.jpeg",
+  "/images/fashion-02.jpeg",
   "/images/stay-radiant-founder.png"
 ];
 

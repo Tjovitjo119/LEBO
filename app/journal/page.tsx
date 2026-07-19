@@ -12,7 +12,7 @@ export default function JournalPage() {
     <>
       <section className="relative overflow-hidden bg-radiantInk text-white">
         <div className="relative h-[40vh] w-full sm:h-[45vh]">
-          <Image src="/images/fashion 01.jpeg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+          <Image src="/images/fashion-01.jpeg" alt="" fill priority sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <div className="text-center">

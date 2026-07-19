@@ -13,7 +13,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Bold solutions tailored for impact."
         description="Stay Radiant supports brands and creators through editorial content, collaboration strategy, SEO-led blog growth, and future-ready community products."
-        image="/images/skincare 01.jpeg"
+        image="/images/skincare-01.jpeg"
       />
 
       <section className="section-sr bg-radiantCream">
